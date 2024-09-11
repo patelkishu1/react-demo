@@ -118,7 +118,7 @@ function AddEmployee({ mode }) {
             {departments.map((dept) => 
             (
               <option key={dept.id} value={dept.id}>
-                {dept.departmentName} {/* Update this if your API returns different field */}
+                {dept.departmentName}
               </option>
             ))}
           </select>
