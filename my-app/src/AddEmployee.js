@@ -45,7 +45,7 @@ function AddEmployee({ mode }) {
     };
 
     fetchDepartments(); // Fetch departments
-    fetchEmployee(); // Fetch employee if in update mode
+    fetchEmployee();
   }, [id, mode]);
 
   const handleSubmit = async (e) => {
