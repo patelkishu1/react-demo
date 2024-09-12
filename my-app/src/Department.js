@@ -1,4 +1,3 @@
-// src/Departments.js
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getDepartments, deleteDepartment } from './apiService';
@@ -11,7 +10,7 @@ function Departments() {
     const fetchDepartments = async () => {
       try {
         const response = await getDepartments();
-        console.log('Fetched departments:', response.data); // Debugging line
+        console.log('Fetched departments:', response.data); 
         setDepartments(response.data);
       } catch (error) {
         console.error('Error fetching departments:', error);
