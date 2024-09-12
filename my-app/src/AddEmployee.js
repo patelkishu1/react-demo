@@ -1,8 +1,7 @@
-// src/AddEmployee.js
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getEmployeeById, addEmployee, updateEmployee } from './apiService';
-import { getDepartments } from './apiService'; // Import getDepartments API call
+import { getDepartments } from './apiService'; 
 
 function AddEmployee({ mode }) {
   const { id } = useParams();
@@ -12,7 +11,7 @@ function AddEmployee({ mode }) {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [department, setDepartment] = useState('');
-  const [departments, setDepartments] = useState([]); // State for departments
+  const [departments, setDepartments] = useState([]); 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -40,11 +39,11 @@ function AddEmployee({ mode }) {
           setLoading(false);
         }
       } else {
-        setLoading(false); // If in add mode, no need to fetch data
+        setLoading(false); 
       }
     };
 
-    fetchDepartments(); // Fetch departments
+    fetchDepartments(); 
     fetchEmployee();
   }, [id, mode]);
 
