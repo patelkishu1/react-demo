@@ -7,7 +7,7 @@ import { getDepartments } from './apiService'; // Import getDepartments API call
 function AddEmployee({ mode }) {
   const { id } = useParams();
   const navigate = useNavigate();
-  
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -115,7 +115,7 @@ function AddEmployee({ mode }) {
             required
           >
             <option value="">Select Department</option>
-            {departments.map((dept) => 
+            {departments.map((dept) =>
             (
               <option key={dept.id} value={dept.id}>
                 {dept.departmentName}

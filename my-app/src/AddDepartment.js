@@ -1,4 +1,3 @@
-// src/AddDepartment.js
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getDepartmentById, addDepartment, updateDepartment } from './apiService';
@@ -27,7 +26,7 @@ function AddDepartment({ mode }) {
       };
       fetchDepartment();
     } else {
-      setLoading(false); // If in add mode, no need to fetch data
+      setLoading(false);
     }
   }, [id, mode]);
 
