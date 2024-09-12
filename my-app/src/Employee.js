@@ -1,4 +1,4 @@
-// src/Employees.js
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getEmployees, deleteEmployee } from './apiService';
@@ -11,7 +11,7 @@ function Employees() {
     const fetchEmployees = async () => {
       try {
         const response = await getEmployees();
-        console.log('Fetched employees:', response.data); // Debugging line
+        console.log('Fetched employees:', response.data); 
         setEmployees(response.data);
       } catch (error) {
         console.error('Error fetching employees:', error);
